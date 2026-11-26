@@ -1,4 +1,3 @@
-/* Full-screen setup and replaceable background image */
 * {
     box-sizing: border-box;
 }
@@ -12,8 +11,6 @@ body {
     line-height: 1.6;
     color: rgb(30, 35, 42);
     background-color: #d8e2ec;
-
-    /* Replace photos/background.jpg later with any background image */
     background-image: url("photos/background.jpg");
     background-size: cover;
     background-position: center;
@@ -21,7 +18,6 @@ body {
     background-attachment: fixed;
 }
 
-/* Full-width wrapper */
 .page-wrapper {
     width: 100%;
     min-height: 100vh;
@@ -30,7 +26,6 @@ body {
     background-color: rgba(248, 249, 252, 0.91);
 }
 
-/* Top Navigation Bar - Royal Navy + Gold */
 .top-navbar {
     width: 100%;
     background-color: #162a45;
@@ -57,18 +52,6 @@ body {
     box-shadow: 0 2px 4px rgba(22, 42, 69, 0.25);
 }
 
-.user-status {
-    background-color: rgb(232, 241, 250);
-    color: #1f6f54;
-    border: 2px solid #1f6f54;
-    border-radius: 4px;
-    padding: 7px 14px;
-    font-size: 13px;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(31, 111, 84, 0.2);
-}
-
-/* Header - Deep Burgundy + Soft Gold Subtitle */
 .site-header {
     width: 100%;
     background-color: #6e1d36;
@@ -92,7 +75,6 @@ body {
     color: rgb(252, 226, 156);
 }
 
-/* Main Content */
 .content-area {
     flex: 1;
     width: 100%;
@@ -131,7 +113,6 @@ body {
     font-size: 19px;
 }
 
-/* Boxes and Grids - Sage Teal */
 .panel-box {
     background-color: rgb(226, 241, 238);
     border: 1px solid #1f6f54;
@@ -187,7 +168,6 @@ body {
     color: #5b2c5c;
 }
 
-/* Tables - Slate Blue + Soft Ivory */
 .table-wrap {
     width: 100%;
     overflow-x: auto;
@@ -217,7 +197,6 @@ td {
     background-color: rgb(248, 249, 252);
 }
 
-/* Forms - Warm Sand */
 .form-box {
     background-color: rgb(245, 236, 215);
     border: 1px solid #b84a39;
@@ -238,8 +217,7 @@ td {
 .form-box input[type="text"],
 .form-box input[type="password"],
 .form-box input[type="number"],
-.form-box textarea,
-.panel-box input[type="text"] {
+.form-box textarea {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid #2d4f7c;
@@ -265,36 +243,6 @@ td {
     box-shadow: 0 2px 5px rgba(110, 29, 54, 0.28);
 }
 
-.secondary-btn {
-    margin-top: 14px;
-    margin-left: 8px;
-    background-color: #2d4f7c;
-    color: rgb(255, 255, 255);
-    border: 1px solid #162a45;
-    border-radius: 4px;
-    padding: 10px 16px;
-    font-family: Georgia, serif;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(45, 79, 124, 0.22);
-}
-
-.request-item {
-    background-color: rgb(245, 236, 215);
-    border: 1px solid #1f6f54;
-    border-left: 5px solid #5b2c5c;
-    border-radius: 4px;
-    padding: 14px;
-    margin-top: 12px;
-    box-shadow: 0 2px 5px rgba(91, 44, 92, 0.14);
-}
-
-.request-item p {
-    margin: 6px 0 0 0;
-}
-
-/* Video Box - Soft Sky Tint + Plum Border */
 .video-box {
     width: 100%;
     background-color: rgb(232, 241, 250);
@@ -312,7 +260,6 @@ td {
     border-radius: 3px;
 }
 
-/* Footer - Royal Navy + Gold */
 .site-footer {
     width: 100%;
     background-color: #162a45;
@@ -324,7 +271,6 @@ td {
     box-shadow: 0 -2px 6px rgba(22, 42, 69, 0.25);
 }
 
-/* Tablet Layout */
 @media (max-width: 900px) {
     .two-col,
     .grid-list,
@@ -337,7 +283,6 @@ td {
     }
 }
 
-/* Mobile Layout */
 @media (max-width: 600px) {
     .site-header {
         padding: 16px 12px;

@@ -10,29 +10,24 @@
 
     <div class="page-wrapper">
 
-        <!-- Top Navbar -->
         <nav class="top-navbar">
             <button type="button" onclick="openTab('home')">Home</button>
-            <button type="button" onclick="openTab('login')">Login / Register</button>
+            <button type="button" onclick="openTab('login')">Login</button>
             <button type="button" onclick="openTab('prayer')">Prayer</button>
             <button type="button" onclick="openTab('fathers')">Our Fathers</button>
             <button type="button" onclick="openTab('events')">Events</button>
             <button type="button" onclick="openTab('requests')">Prayer Requests</button>
             <button type="button" onclick="openTab('donations')">Donations</button>
             <button type="button" onclick="openTab('photos')">Photos</button>
-            <span class="user-status" id="userBadge">Guest</span>
         </nav>
 
-        <!-- Header -->
         <header class="site-header">
             <h1>Grace Church Management System</h1>
             <p><i>"A House of Prayer, Peace, and Community"</i></p>
         </header>
 
-        <!-- Main Content -->
         <main class="content-area">
 
-            <!-- HOME TAB -->
             <section id="home" class="tab-section">
                 <h2>Welcome to Grace Church</h2>
                 <p>
@@ -56,42 +51,24 @@
                 </div>
             </section>
 
-            <!-- LOGIN / REGISTER TAB -->
             <section id="login" class="tab-section hidden-tab">
-                <h2>User Login &amp; Registration</h2>
-                <p id="authMessage">You are currently browsing as Guest.</p>
+                <h2>User Login</h2>
 
-                <div class="two-col">
-                    <!-- Login Form -->
-                    <form id="loginForm" class="form-box" onsubmit="loginUser(event)">
-                        <h3>Login</h3>
+                <form class="form-box">
 
-                        <label for="loginName">Username:</label>
-                        <input type="text" id="loginName" required placeholder="Enter username">
+                    <h3>Login</h3>
 
-                        <label for="loginPass">Password:</label>
-                        <input type="password" id="loginPass" required placeholder="Enter password">
+                    <label for="loginName">Username:</label>
+                    <input type="text" id="loginName" placeholder="Enter username" required>
 
-                        <button type="submit" class="action-btn">Login</button>
-                        <button type="button" class="secondary-btn" onclick="logoutUser()">Logout</button>
-                    </form>
+                    <label for="loginPass">Password:</label>
+                    <input type="password" id="loginPass" placeholder="Enter password" required>
 
-                    <!-- Register Form -->
-                    <form id="registerForm" class="form-box" onsubmit="registerUser(event)">
-                        <h3>Register</h3>
+                    <button type="reset" class="action-btn">Submit</button>
 
-                        <label for="regName">New Username:</label>
-                        <input type="text" id="regName" required placeholder="Create username">
-
-                        <label for="regPass">Create Password:</label>
-                        <input type="password" id="regPass" required placeholder="Create password">
-
-                        <button type="submit" class="action-btn">Register</button>
-                    </form>
-                </div>
+                </form>
             </section>
 
-            <!-- PRAYER TAB -->
             <section id="prayer" class="tab-section hidden-tab">
                 <h2>Prayer &amp; Service Timings</h2>
 
@@ -124,7 +101,6 @@
                 <p>Replace the YouTube embed link below in index.html whenever you want to update the video.</p>
 
                 <div class="video-box">
-                    <!-- Replace src link later with any YouTube embed URL -->
                     <iframe
                         src="https://www.youtube.com/embed/jfKfPfyJRdk"
                         title="Church Prayer Video"
@@ -134,7 +110,6 @@
                 </div>
             </section>
 
-            <!-- OUR FATHERS TAB -->
             <section id="fathers" class="tab-section hidden-tab">
                 <h2>Our Fathers</h2>
                 <p>Spiritual leaders serving our church community:</p>
@@ -160,48 +135,47 @@
                 </div>
             </section>
 
-            <!-- EVENTS TAB -->
             <section id="events" class="tab-section hidden-tab">
                 <h2>Upcoming Church Events</h2>
 
-                <!-- Search Events -->
-                <div class="panel-box">
-                    <label for="eventSearch">Search Upcoming Events:</label>
-                    <input type="text" id="eventSearch" onkeyup="displayEvents()" placeholder="Search event name...">
-                </div>
-
                 <div class="table-wrap">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Event Name</th>
-                                <th>Date</th>
-                                <th>Timing</th>
-                            </tr>
-                        </thead>
-                        <tbody id="eventsTableBody"></tbody>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Timing</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday Choir Gathering</td>
+                            <td>29 November 2026</td>
+                            <td>11:15 AM - 12:15 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Youth Prayer Meeting</td>
+                            <td>02 December 2026</td>
+                            <td>05:00 PM - 06:30 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Community Charity Drive</td>
+                            <td>06 December 2026</td>
+                            <td>10:00 AM - 01:00 PM</td>
+                        </tr>
                     </table>
                 </div>
             </section>
 
-            <!-- PRAYER REQUESTS TAB -->
             <section id="requests" class="tab-section hidden-tab">
                 <h2>Prayer Requests</h2>
 
-                <form id="prayerForm" class="form-box" onsubmit="submitPrayerRequest(event)">
+                <div class="form-box">
                     <label for="userName">Your Name:</label>
-                    <input type="text" id="userName" required placeholder="Enter your name">
+                    <input type="text" id="userName" placeholder="Enter your name">
 
                     <label for="prayerText">Your Prayer Request:</label>
-                    <textarea id="prayerText" rows="4" required placeholder="Write your prayer request here..."></textarea>
-
-                    <button type="submit" class="action-btn">Submit</button>
-                </form>
-
-                <div id="requestsList"></div>
+                    <textarea id="prayerText" rows="4" placeholder="Write your prayer request here..."></textarea>
+                </div>
             </section>
 
-            <!-- DONATIONS TAB -->
             <section id="donations" class="tab-section hidden-tab">
                 <h2>Donations</h2>
 
@@ -213,7 +187,6 @@
                         min="1"
                         step="1"
                         inputmode="numeric"
-                        onkeydown="allowOnlyNumbers(event)"
                         required
                         placeholder="Enter amount">
 
@@ -227,17 +200,30 @@
                 </div>
             </section>
 
-            <!-- PHOTOS TAB -->
             <section id="photos" class="tab-section hidden-tab">
                 <h2>Church Photos</h2>
-                <p>Add images inside the <code>photos/</code> folder and list them in script.js.</p>
+                <p>Add or change the image names directly in this HTML section.</p>
 
-                <div id="photoGallery" class="photo-grid"></div>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="photos/photo1.jpg" alt="Grace Church Main Hall">
+                        <p>Grace Church Main Hall</p>
+                    </div>
+
+                    <div class="photo-card">
+                        <img src="photos/photo2.jpg" alt="Sunday Prayer Service">
+                        <p>Sunday Prayer Service</p>
+                    </div>
+
+                    <div class="photo-card">
+                        <img src="photos/photo3.jpg" alt="Community Fellowship">
+                        <p>Community Fellowship</p>
+                    </div>
+                </div>
             </section>
 
         </main>
 
-        <!-- Footer -->
         <footer class="site-footer">
             <p>Grace Church Management System</p>
         </footer>
